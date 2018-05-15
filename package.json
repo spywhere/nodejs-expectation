@@ -1,6 +1,6 @@
 {
   "name": "expectation-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A JSON validator with built-in code generator",
   "scripts": {
     "test": "jest",

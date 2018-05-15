@@ -5,3 +5,4 @@ preprocessor.js
 *.json
 
 !lib
+!*.d.ts
