@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "lib",
+        "removeComments": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "declaration": true
+    },
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "jspm_packages",
+        "typings",
+        "tmp",
+        "temp",
+        "common",
+        "tests"
+    ]
+}

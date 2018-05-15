@@ -1,0 +1,7 @@
+*.ts
+preprocessor.js
+.editorconfig
+.travis.yml
+*.json
+
+!lib

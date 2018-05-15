@@ -1,0 +1,49 @@
+{
+  "name": "expectation-js",
+  "version": "0.0.3",
+  "description": "A JSON validator with built-in code generator",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --verbose --coverage",
+    "lint": "tslint --project tsconfig.json -e \"tests/**/*.ts\" -e \"node_modules/**/*\" \"**/*.ts\"",
+    "compile": "tsc",
+    "clean": "rm -r lib",
+    "compile-check": "tsc --noEmit",
+    "prepack": "npm run compile",
+    "postpack": "npm run clean",
+    "pack-check": "npm pack | tail -n 1 | xargs -I @ sh -c \"rm @\"",
+    "upload-coverage": "coveralls < ./coverage/lcov.info"
+  },
+  "author": {
+    "name": "Sirisak Lueangsaksri",
+    "email": "sirisak.lu@icloud.com"
+  },
+  "main": "./lib/index.js",
+  "devDependencies": {
+    "@types/node": "^10.0.9",
+    "coveralls": "^3.0.1",
+    "jest": "^22.4.3",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.2.0",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "node"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/logger.ts"
+    ]
+  }
+}
